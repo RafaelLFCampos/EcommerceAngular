@@ -1,0 +1,11 @@
+<h2>Detalhes do Produto</h2>
+
+<mat-card class="example-card" *ngIf="product">
+  <h3>{{ product.name }}</h3>
+  <img mat-card-image [src]="product.img" alt="Toalha" />
+  <mat-card-content>
+    <p>{{ product.description }} {{ product.size }}</p>
+    <h4>R$ {{ product.price }}</h4>
+  </mat-card-content>
+  <button class="button" (click)="addToCart(product)">Comprar</button>
+</mat-card>

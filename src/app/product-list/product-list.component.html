@@ -1,0 +1,11 @@
+<h2>Produtos</h2>
+
+<mat-card class="example-card" *ngFor="let product of products; index as productId">
+  <a [routerLink]="['/products', productId]">
+    <img mat-card-image [src]="product.img" alt="Toalha" />
+    <mat-card-content>
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }} {{ product.size }}</p>
+    </mat-card-content>
+  </a>
+</mat-card>

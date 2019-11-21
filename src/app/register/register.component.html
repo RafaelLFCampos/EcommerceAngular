@@ -1,0 +1,26 @@
+<div class="container" *ngIf="!checkingUser">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Preencha os dados para finalizar o cadastro</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <input matInput placeholder="Digite seu CPF" [(ngModel)]="cpf" />
+      <input matInput placeholder="Digite seu Endereço" [(ngModel)]="endereco" />
+      <input matInput placeholder="Digite seu telefone" [(ngModel)]="telefone" />
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button class="button" (click)="adicionarDados()">
+        Registrar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div class="loading" *ngIf="checkingUser">
+  <mat-progress-spinner
+    *ngIf="showLoading"
+    class="example-margin"
+    color="primary"
+    mode="determinate"
+    value="50"
+  ></mat-progress-spinner>
+</div>

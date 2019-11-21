@@ -1,0 +1,12 @@
+<div>
+  <label>Produtos</label>
+
+  <div *ngFor="let produto of produtos; index as id">
+    <a [routerLink]="['/detalhes', id]">
+      <label>
+        {{ produto.nome }} | {{ produto.cor }} | {{ produto.escrita }} |
+        {{ produto.caminhoImagem }}
+      </label>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div id="left">
+  <img src="../../assets/img-top-bar/img.png" />
+  <a [routerLink]="['/']">
+    <h1>Amarte Ateliê</h1>
+  </a>
+</div>
+<div id="right">
+  <div id="cart">
+    <a [routerLink]="['/cart']" class="button fancy-button"
+      ><i class="material-icons">shopping_cart</i>Carrinho</a
+    >
+  </div>
+
+  <div id="buttons">
+    <button mat-raised-button *ngIf="!logado" [routerLink]="['/login']">
+      Login
+    </button>
+
+    <button mat-raised-button class="button" *ngIf="logado" (click)="logout()">
+      Logout
+    </button>
+  </div>
+</div>

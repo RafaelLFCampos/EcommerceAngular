@@ -1,0 +1,12 @@
+<h3>Carrinho</h3>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>R$ {{ item.price }}</span>
+</div>
+
+<div ([ngModel])="total">
+  <span>Total R$: {{ total }}</span>
+</div>
+
+<button class="button" (click)="clearCart()" [routerLink]="['/finalizar']">Finalizar</button>
